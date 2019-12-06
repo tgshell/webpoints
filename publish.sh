@@ -3,4 +3,4 @@ git config user.email 'tgshell@sina.com'
 git add .
 git commit -m'docs: update blog'
 git push
-npm run publish
+npm run publish-script
