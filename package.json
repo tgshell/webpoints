@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "hexo clean && hexo g && hexo s",
-    "publish": "hexo clean && hexo g && hexo d"
+    "publish-script": "hexo clean && hexo g && hexo d",
+    "publish": "sh publish.sh"
   },
   "hexo": {
     "version": "3.9.0"
