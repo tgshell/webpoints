@@ -191,6 +191,196 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://tgshell.com/2019/12/05/Tool/brew/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tgshell">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WebPoints">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/12/05/Tool/brew/" class="post-title-link" itemprop="url">未命名</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-05 19:41:52" itemprop="dateCreated datePublished" datetime="2019-12-05T19:41:52+08:00">2019-12-05</time>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://tgshell.com/2019/12/05/Tool/zsh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tgshell">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WebPoints">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/12/05/Tool/zsh/" class="post-title-link" itemprop="url">macos 上的 zsh 配置</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-05 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-05T19:00:00+08:00">2019-12-05</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-06 10:18:41" itemprop="dateModified" datetime="2019-12-06T10:18:41+08:00">2019-12-06</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这几天升级了下 macos Catalina，打开 vscode 终端时发现提示了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The default interactive shell is now zsh.</span><br><span class="line">To update your account to use zsh, please run `chsh -s /bin/zsh`.</span><br><span class="line">For more details, please visit https://support.apple.com/kb/HT208050.</span><br></pre></td></tr></table></figure></p>
+<p>简而言之，就是从这个版本开始，macos 开始使用 zsh 替代 bash 用做默认的 shell 工具。那么下面来看下具体的配置方式。</p>
+<blockquote>
+<p>下方说的应用配置，均指：source ~/.zshrc</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>macos 默认已经安装了 zsh，贴一下安装/升级方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 查看 zsh 版本</span><br><span class="line">zsh --version</span><br><span class="line"></span><br><span class="line"># 升级 zsh</span><br><span class="line">brew install zsh zsh-completions</span><br></pre></td></tr></table></figure></p>
+<p>注：brew 默认是走 Github 源的，会比较慢，可以通过切换源来提速，参见<a href>brew 提速</a></p>
+<p>如果需要切换 macos shell 工具，可以看下<a href="https://support.apple.com/zh-cn/HT208050" target="_blank" rel="noopener">苹果官网教程 - 在 Mac 上将 zsh 用作默认 Shell</a></p>
+<h2 id="使用-oh-my-zsh"><a href="#使用-oh-my-zsh" class="headerlink" title="使用 oh my zsh"></a>使用 oh my zsh</h2><p>oh my zsh 下简称 omz。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>安装 oh my zsh 可以通过 curl 方式或 wget 方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># curl</span><br><span class="line">$ sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br><span class="line"></span><br><span class="line"># wget</span><br><span class="line">$ sh -c &quot;$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>安装后会自动生效，若未生效可重启终端，附<a href="https://ohmyz.sh/" target="_blank" rel="noopener">omz 官网地址</a>。</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>找到 Theme 配置代码块，可以看到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;ys&quot;</span><br></pre></td></tr></table></figure></p>
+<p>笔者使用的是 ys，感觉挺好用的，有兴趣可以尝试下其它的主题效果。</p>
+<p>全部主题可以在<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank" rel="noopener">omz Github 主题列表</a>上查看，如果示例图片速度加载的慢，可以看下这篇文章<a href="https://birdteam.net/131798" target="_blank" rel="noopener">omz 主题列表</a></p>
+<h3 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h3><p>打开 .zshrc 文件，找到 plugins 配置代码块，可以看到默认已经有了 git 配置，那么接下来再增加几个常用插件。</p>
+<h4 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 安装方式</span><br><span class="line">brew install autojump</span><br><span class="line"></span><br><span class="line"># 执行以下命令</span><br><span class="line"></span><br><span class="line">echo &apos;[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh&apos; &gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h4 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 安装方式</span><br><span class="line">git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+<p>打开 ~/.zshrc 配置文件，在 plugins 配置代码块增加 zsh-autosuggestions。</p>
+<p>使用了下插件后，发现默认的提示信息文本颜色很淡，不清晰，虽然跟我的终端底色半透黑有关系，但还是调整一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 修改 zsh-autosuggestions 提示信息颜色</span><br><span class="line">echo &apos;ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&apos;fg=30&apos;&apos; &gt;  ~/.zshrc</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>fg 值即为终端中展示的提示信息颜色，笔者目前使用的是30，选择其它颜色可参见<a href="./img/xterm-color.svg">xterm色值对照表</a></p>
+</blockquote>
+<p>贴一下插件代码块示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  autojump</span><br><span class="line">  git</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p>保存并应用配置。</p>
+<h2 id="保留-bash-脚本"><a href="#保留-bash-脚本" class="headerlink" title="保留 bash 脚本"></a>保留 bash 脚本</h2><p>由于之前使用的是 bash，有些个性化的命令，但是使用 zsh 后自然就失效了，那么只需要增加一点配置，即可恢复使用。方法是在 .zshrc 中找到 # User configuration 配置代码块，加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>保存并应用配置。</p>
+<h2 id="vscode-切换-zsh"><a href="#vscode-切换-zsh" class="headerlink" title="vscode 切换 zsh"></a>vscode 切换 zsh</h2><p>最后改下 vscode 配置，增加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;terminal.integrated.shell.osx&quot;: &quot;zsh&quot;,</span><br></pre></td></tr></table></figure></p>
+<p>即可将 zsh 用做默认的 shell 工具，再打开终端就不会有提示了。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://tgshell.com/2019/12/04/Javascript/进程与线程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -605,7 +795,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -618,7 +808,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -631,7 +821,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
