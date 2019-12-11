@@ -10,6 +10,8 @@ tags:
 - vscode
 ---
 
+## 前言
+
 这几天升级了下 macos Catalina，打开 vscode 终端时发现提示了
 ```
 The default interactive shell is now zsh.
@@ -71,8 +73,7 @@ ZSH_THEME="ys"
 brew install autojump
 
 # 执行以下命令
-
-echo '[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh' > ~/.zshrc
+echo '[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh' >> ~/.zshrc
 ```
 
 #### zsh-autosuggestions
@@ -88,7 +89,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh
 
 ```
 # 修改 zsh-autosuggestions 提示信息颜色
-echo 'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'' >  ~/.zshrc
+echo 'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'' >>  ~/.zshrc
 ```
 >fg 值即为终端中展示的提示信息颜色，笔者目前使用的是30，选择其它颜色可参见[xterm色值对照表](https://t1.picb.cc/uploads/2019/12/06/kn6hUs.png)
 
@@ -107,7 +108,7 @@ plugins=(
 
 由于之前使用的是 bash，有些个性化的命令，但是使用 zsh 后自然就失效了，那么只需要增加一点配置，即可恢复使用。方法是在 .zshrc 中找到 # User configuration 配置代码块，加入
 ```
-source ~/.bash_profile
+echo "source ~/.bash_profile" >> ~/.zshrc
 ```
 保存并应用配置。
 
