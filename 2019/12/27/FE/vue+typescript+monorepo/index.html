@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="12345678910111213141516# Clone your git repogit clone https://github.com/xxx.git;# Entre your local repocd xxx;# Checkoutgit checkout --orphan latest_branch;# Add all the filesgit add -A;# Commit the">
-<meta name="keywords" content="Git,Commit">
+  <meta name="description" content="写在前面由于前端语言发展形势的影响，近期启动对基于 vue 的 monorepo 工程集成 typescript。涉及的语言及插件如下： vuevue 从 2.5x 已经开始对 typescript 进行支持。本文是基于 vue 2.6.10 版本进行的升级动作。现在 vue 已经发布了 3.0 版本源码，即 vue-next，可以查看尤雨溪的宣讲即，有兴趣也可以到 github star 一下。">
+<meta name="keywords" content="vue,typescript,lerna,eslint,webpack4,monorepo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="清除 Git Commits">
-<meta property="og:url" content="https://tgshell.com/2019/12/04/Git/清除Git-Commits/index.html">
+<meta property="og:title" content="vue + typescript + lerna + webpack">
+<meta property="og:url" content="https://tgshell.com/2019/12/27/FE/vue+typescript+monorepo/index.html">
 <meta property="og:site_name" content="WebPoints">
-<meta property="og:description" content="12345678910111213141516# Clone your git repogit clone https://github.com/xxx.git;# Entre your local repocd xxx;# Checkoutgit checkout --orphan latest_branch;# Add all the filesgit add -A;# Commit the">
+<meta property="og:description" content="写在前面由于前端语言发展形势的影响，近期启动对基于 vue 的 monorepo 工程集成 typescript。涉及的语言及插件如下： vuevue 从 2.5x 已经开始对 typescript 进行支持。本文是基于 vue 2.6.10 版本进行的升级动作。现在 vue 已经发布了 3.0 版本源码，即 vue-next，可以查看尤雨溪的宣讲即，有兴趣也可以到 github star 一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-04T08:08:05.530Z">
+<meta property="og:updated_time" content="2019-12-27T06:21:06.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="清除 Git Commits">
-<meta name="twitter:description" content="12345678910111213141516# Clone your git repogit clone https://github.com/xxx.git;# Entre your local repocd xxx;# Checkoutgit checkout --orphan latest_branch;# Add all the filesgit add -A;# Commit the">
-  <link rel="canonical" href="https://tgshell.com/2019/12/04/Git/清除Git-Commits/">
+<meta name="twitter:title" content="vue + typescript + lerna + webpack">
+<meta name="twitter:description" content="写在前面由于前端语言发展形势的影响，近期启动对基于 vue 的 monorepo 工程集成 typescript。涉及的语言及插件如下： vuevue 从 2.5x 已经开始对 typescript 进行支持。本文是基于 vue 2.6.10 版本进行的升级动作。现在 vue 已经发布了 3.0 版本源码，即 vue-next，可以查看尤雨溪的宣讲即，有兴趣也可以到 github star 一下。">
+  <link rel="canonical" href="https://tgshell.com/2019/12/27/FE/vue+typescript+monorepo/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>清除 Git Commits | WebPoints</title>
+  <title>vue + typescript + lerna + webpack | WebPoints</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -197,7 +197,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://tgshell.com/2019/12/04/Git/清除Git-Commits/">
+    <link itemprop="mainEntityOfPage" href="https://tgshell.com/2019/12/27/FE/vue+typescript+monorepo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tgshell">
@@ -209,7 +209,7 @@
       <meta itemprop="name" content="WebPoints">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">清除 Git Commits
+        <h1 class="post-title" itemprop="name headline">vue + typescript + lerna + webpack
 
           
         </h1>
@@ -225,7 +225,7 @@
                 
               
 
-              <time title="创建时间：2019-12-04 15:33:55 / 修改时间：16:08:05" itemprop="dateCreated datePublished" datetime="2019-12-04T15:33:55+08:00">2019-12-04</time>
+              <time title="创建时间：2019-12-27 12:00:00 / 修改时间：14:21:06" itemprop="dateCreated datePublished" datetime="2019-12-27T12:00:00+08:00">2019-12-27</time>
             </span>
           
             
@@ -238,7 +238,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a></span>
 
                 
                 
@@ -257,8 +257,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Clone your git repo</span><br><span class="line">git clone https://github.com/xxx.git;</span><br><span class="line"># Entre your local repo</span><br><span class="line">cd xxx;</span><br><span class="line"># Checkout</span><br><span class="line">git checkout --orphan latest_branch;</span><br><span class="line"># Add all the files</span><br><span class="line">git add -A;</span><br><span class="line"># Commit the changes</span><br><span class="line">git commit -am &quot;Reinitialize&quot;;</span><br><span class="line"># Delete the branch</span><br><span class="line">git branch -D master;</span><br><span class="line"># Rename the current branch to master</span><br><span class="line">git branch -m master;</span><br><span class="line"># Finally, force update your repository</span><br><span class="line">git push -f origin master;</span><br></pre></td></tr></table></figure>
-<p>转载自：<a href="https://blog.csdn.net/yolohohohoho/article/details/90607229" target="_blank" rel="noopener">https://blog.csdn.net/yolohohohoho/article/details/90607229</a></p>
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>由于前端语言发展形势的影响，近期启动对基于 vue 的 monorepo 工程集成 typescript。涉及的语言及插件如下：</p>
+<h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><p><code>vue</code> 从 <code>2.5x</code> 已经开始对 <code>typescript</code> 进行支持。本文是基于 <code>vue 2.6.10</code> 版本进行的升级动作。<br><br>现在 <code>vue</code> 已经发布了 3.0 版本源码，即 <code>vue-next</code>，可以查看<a href>尤雨溪的宣讲</a>即，有兴趣也可以到 <code>github</code> <code>star</code> 一下。地址：<a href="https://github.com/vuejs/vue-next" target="_blank" rel="noopener"><code>vue-next(3.0)</code></a>。</p>
+<h2 id="typescript"><a href="#typescript" class="headerlink" title="typescript"></a>typescript</h2><p>官方定义：JavaScript的超集。文档地址：<br><a href="http://www.typescriptlang.org/" target="_blank" rel="noopener">英文官网</a>，<a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener">中文网</a></p>
+<h3 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a>lerna</h3><p>组件库使用 <code>lerna</code> 进行管理，<a href="https://github.com/lerna/lerna" target="_blank" rel="noopener"><code>点击前往 lerna 官网</code></a>。</p>
+<h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>使用 <a href="http://eslint.cn/docs/user-guide/configuring" target="_blank" rel="noopener"><code>eslint</code></a> + <a href="https://prettier.io/docs/en/options.html" target="_blank" rel="noopener"><code>prettier</code></a></p>
+<blockquote>
+<p>tslint 已经官方宣布2019年停止维护，转向 eslint。</p>
+</blockquote>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>使用 <a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener"><code>webpack4</code></a> 作为运行测试及打包工具。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在 typescript 2.7 版本，属性定义需要指定 !:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Prop(&#123; default: false &#125;) isGetBackPwdDisable!: boolean;</span><br></pre></td></tr></table></figure></p>
+<p>若不指定，编辑器会提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Property &apos;isGetBackPwdDisable&apos; has no initializer and is not definitely assigned in the constructor.</span><br></pre></td></tr></table></figure></p>
+<p>查看官方释义 <a href="http://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-7.html#definite-assignment-assertions" target="_blank" rel="noopener"><code>Definite Assignment Assertions</code></a>，也可以通过以下配置方式解决<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;strictPropertyInitialization&quot;: false</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -274,9 +284,17 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Git/" rel="tag"># Git</a>
+              <a href="/tags/vue/" rel="tag"># vue</a>
             
-              <a href="/tags/Commit/" rel="tag"># Commit</a>
+              <a href="/tags/typescript/" rel="tag"># typescript</a>
+            
+              <a href="/tags/lerna/" rel="tag"># lerna</a>
+            
+              <a href="/tags/eslint/" rel="tag"># eslint</a>
+            
+              <a href="/tags/webpack4/" rel="tag"># webpack4</a>
+            
+              <a href="/tags/monorepo/" rel="tag"># monorepo</a>
             
           </div>
         
@@ -286,8 +304,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/30/FE/vscode-fe-format/" rel="next" title="VSCODE 前端开发格式化配置">
-                  <i class="fa fa-chevron-left"></i> VSCODE 前端开发格式化配置
+                <a href="/2019/12/16/FE/使用service-worker/" rel="next" title="">
+                  <i class="fa fa-chevron-left"></i> 
                 </a>
               
             </div>
@@ -296,8 +314,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/12/04/Javascript/进程与线程/" rel="prev" title="浏览器 Javascript 线程逻辑">
-                  浏览器 Javascript 线程逻辑 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/07/23/Mac/mhdisk-lost/" rel="prev" title="">
+                   <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -347,6 +365,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue"><span class="nav-number">2.</span> <span class="nav-text">vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#typescript"><span class="nav-number">3.</span> <span class="nav-text">typescript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lerna"><span class="nav-number">3.1.</span> <span class="nav-text">lerna</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码规范"><span class="nav-number">3.2.</span> <span class="nav-text">代码规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译"><span class="nav-number">3.3.</span> <span class="nav-text">编译</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
