@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   var sidebarToggleMotion = {
     sidebarEl       : document.querySelector('.sidebar'),
-    isSidebarVisible: false,
+    isSidebarVisible: true,
     init            : function() {
       sidebarToggleLines.init();
 
